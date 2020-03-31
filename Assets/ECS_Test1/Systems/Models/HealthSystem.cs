@@ -29,8 +29,8 @@ public sealed class HealthSystem : UpdateSystem {
             Debug.Log("Health Text is:" + healthComponent.healthText);
         }
 
-        //Перебираем все сущности в фильтре
-        /*foreach (var entity in this.filter)
+        /*//Перебираем все сущности в фильтре
+        foreach (var entity in this.filter)
         {
             ref var healthComponent = ref entity.GetComponent<HealthComponent>();
             //Печатает количество жизней у сущности
