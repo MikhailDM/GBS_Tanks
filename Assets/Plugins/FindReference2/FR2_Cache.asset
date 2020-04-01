@@ -4383,6 +4383,51 @@ MonoBehaviour:
     stamp: 0
     type: 5
     UseGUIDsList: []
+  - guid: 0536574f16e994a4fa80f3451c45766a
+    loadInfoTS: 0
+    stamp: 0
+    type: 1
+    UseGUIDsList: []
+  - guid: 5917cbaf8875e224fa2701a199dff3bb
+    loadInfoTS: 0
+    stamp: 0
+    type: 1
+    UseGUIDsList: []
+  - guid: b98c3b03c30d7e2428eb2cd0bd8a0422
+    loadInfoTS: 0
+    stamp: 0
+    type: 1
+    UseGUIDsList: []
+  - guid: ae01ca0ced449ab4986de3c032dff3f6
+    loadInfoTS: 0
+    stamp: 0
+    type: 1
+    UseGUIDsList: []
+  - guid: 4fd62041e4a660b4e8672db9b033e912
+    loadInfoTS: 0
+    stamp: 0
+    type: 1
+    UseGUIDsList: []
+  - guid: 3a286af778687624d954d2af67aa7ccd
+    loadInfoTS: 0
+    stamp: 0
+    type: 2
+    UseGUIDsList: []
+  - guid: 4e3bda5784dbb104bba330133d60c032
+    loadInfoTS: 0
+    stamp: 0
+    type: 2
+    UseGUIDsList: []
+  - guid: 68038560b6c60a146b51d3e7b2365d76
+    loadInfoTS: 0
+    stamp: 0
+    type: 5
+    UseGUIDsList: []
+  - guid: 6e311cbe8d0d9fb4c875b9c664d5c86e
+    loadInfoTS: 0
+    stamp: 0
+    type: 2
+    UseGUIDsList: []
   priority: 3
   setting:
     alternateColor: 1
