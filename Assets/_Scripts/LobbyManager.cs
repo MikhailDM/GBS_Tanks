@@ -9,6 +9,8 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     //Поле debug
     public Text LogText;
 
+    //private byte maxPlayersPerRoom = 2;
+
     void Start()
     {
         //Настройки фотона
@@ -25,10 +27,35 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         PhotonNetwork.ConnectUsingSettings();
     }
 
+    //Подлючение к серверу
     public override void OnConnectedToMaster()
     {
         Log("Connected to master");
     }
+
+    //Кнопка создания комнаты. Максимально 2 игрока
+    public void CreateRoom()
+    {
+        PhotonNetwork.CreateRoom(null, new Photon.Realtime.RoomOptions { MaxPlayers = 2 });
+    }
+
+    //Кнопка присоединения к комнате
+    public void JoinRoom()
+    {
+        PhotonNetwork.JoinRandomRoom();
+    }
+
+    //Действия при подключении к комнате
+    public override void OnJoinedRoom()
+    {
+        //Лог
+        Log("Joined to the room");
+        //Переключение сцены
+        PhotonNetwork.LoadLevel("Game");
+    }
+
+
+
 
     //Отображение сообщений консоли в клиенте
     private void Log(string message)

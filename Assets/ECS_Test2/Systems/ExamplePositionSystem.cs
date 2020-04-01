@@ -1,4 +1,5 @@
 ﻿using Morpeh;
+using Morpeh.Globals;
 using UnityEngine;
 using Unity.IL2CPP.CompilerServices;
 
@@ -7,7 +8,7 @@ using Unity.IL2CPP.CompilerServices;
 [Il2CppSetOption(Option.DivideByZeroChecks, false)]
 [CreateAssetMenu(menuName = "ECS/Systems/" + nameof(ExamplePositionSystem))]
 public sealed class ExamplePositionSystem : UpdateSystem {
-    //public GlobalEvent StopEvent;
+    public GlobalEvent StopEvent;
 
     private Filter filterMovableUnits;
 

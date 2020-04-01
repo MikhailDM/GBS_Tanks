@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TanksLobby.unity
+    path: Assets/_Scenes/TanksLobby.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/_Scenes/Game.unity
+    guid: 373af00ccf9622f45ad8b85bdc30d4bc
   m_configObjects: {}
