@@ -17,28 +17,42 @@ public sealed class PlayerControlSystem : UpdateSystem {
     }
 
     public override void OnUpdate(float deltaTime) {
+        UpdateMovement();
+    }
+
+
+
+
+    private void UpdateMovement()
+    {
         var playersBag = this.filter.Select<PlayerComponent>();
         //Перебираем все сущности в фильтре
         for (int i = 0, length = this.filter.Length; i < length; i++)
         {
+            //Получаем все ссылки компонента
             ref var playerComponent = ref playersBag.GetComponent(i);
-            //Изменение координат обьекта
-            //playerComponent.Position = playerComponent.Position + Vector3.one * deltaTime;
-            //Перемещение обьекта
-            //playerComponent.Transform.position = playerComponent.Position;
+           
             //Проверка на управление только своим персонажем
-            /*if (!PhotonView.IsMine)
+            if (!playerComponent.PhotonViewLink.IsMine)
             {
                 return;
-            }*/
+            }
             //Управление персонажем
             if (Input.GetKey(KeyCode.A))
             {
-                playerComponent.Transform.Translate(-Time.deltaTime * 5, 0, 0);
+                playerComponent.Transform.Translate(-Time.deltaTime * playerComponent.speed, 0, 0);
             }
-            if (Input.GetKey(KeyCode.D))
+            else if (Input.GetKey(KeyCode.D))
             {
-                playerComponent.Transform.Translate(Time.deltaTime * 5, 0, 0);
+                playerComponent.Transform.Translate(Time.deltaTime * playerComponent.speed, 0, 0);
+            }
+            else if (Input.GetKey(KeyCode.W))
+            {
+                playerComponent.Transform.Translate(0, Time.deltaTime * playerComponent.speed, 0);
+            }
+            else if (Input.GetKey(KeyCode.S))
+            {
+                playerComponent.Transform.Translate(0, -Time.deltaTime * playerComponent.speed, 0);
             }
         }
     }

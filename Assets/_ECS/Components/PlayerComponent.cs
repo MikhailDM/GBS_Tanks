@@ -8,8 +8,9 @@ using Photon.Pun;
 [Il2CppSetOption(Option.DivideByZeroChecks, false)]
 [System.Serializable]
 public struct PlayerComponent : IComponent {    
-    public PhotonView PhotonView;
+    public PhotonView PhotonViewLink;
     public Vector3 Position;
     public Transform Transform;
     public int lives;
+    public int speed;
 }

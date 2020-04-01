@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3977846520773974770}
   - component: {fileID: 3977846520773974781}
   - component: {fileID: 8330910482404126136}
-  - component: {fileID: 7393952773801145077}
   - component: {fileID: 6174958112346874095}
   - component: {fileID: 4332250525021213984}
   m_Layer: 0
@@ -107,18 +106,6 @@ MonoBehaviour:
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &7393952773801145077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3977846520773974780}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ae4ef8d1ae38bc4da8f62db5b41efc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6174958112346874095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,7 +134,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   serializedData:
-    PhotonView: {fileID: 0}
+    PhotonViewLink: {fileID: 8330910482404126136}
     Position: {x: 0, y: 0, z: 0}
     Transform: {fileID: 3977846520773974770}
     lives: 2
+    speed: 2
