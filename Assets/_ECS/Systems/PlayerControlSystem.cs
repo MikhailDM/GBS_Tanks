@@ -40,19 +40,25 @@ public sealed class PlayerControlSystem : UpdateSystem {
             //Управление персонажем
             if (Input.GetKey(KeyCode.A))
             {
-                playerComponent.Transform.Translate(-Time.deltaTime * playerComponent.speed, 0, 0);
+                playerComponent.Transform.Translate(0, Time.deltaTime * playerComponent.speed, 0);
+                playerComponent.Transform.localRotation = Quaternion.Euler(0, 0, 90);               
             }
             else if (Input.GetKey(KeyCode.D))
             {
-                playerComponent.Transform.Translate(Time.deltaTime * playerComponent.speed, 0, 0);
+                playerComponent.Transform.Translate(0, Time.deltaTime * playerComponent.speed, 0);
+                //playerComponent.Transform.localRotation = Quaternion.Euler(0, 0, 0);
+                playerComponent.Transform.localRotation = Quaternion.Euler(0, 0, 270);
             }
             else if (Input.GetKey(KeyCode.W))
             {
                 playerComponent.Transform.Translate(0, Time.deltaTime * playerComponent.speed, 0);
+                //playerComponent.Transform.Rotate(0, 0, 0);
+                playerComponent.Transform.localRotation = Quaternion.Euler(0, 0, 0);
             }
             else if (Input.GetKey(KeyCode.S))
             {
-                playerComponent.Transform.Translate(0, -Time.deltaTime * playerComponent.speed, 0);
+                playerComponent.Transform.Translate(0, Time.deltaTime * playerComponent.speed, 0);
+                playerComponent.Transform.localRotation = Quaternion.Euler(0, 0, 180);
             }
         }
     }
