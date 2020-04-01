@@ -7,10 +7,15 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviourPunCallbacks
 {
+    public GameObject PlayerPrefab;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        //Спавн персонажей
+        Vector2 pos = new Vector3(0, 0);
+        PhotonNetwork.Instantiate(PlayerPrefab.name, pos, Quaternion.identity);
     }
 
     // Update is called once per frame
@@ -30,7 +35,8 @@ public class GameManager : MonoBehaviourPunCallbacks
     public override void OnLeftRoom()
     {
         //Загружаем сцену
-        SceneManager.LoadScene(0);
+        // SceneManager.LoadScene(0);
+        PhotonNetwork.LoadLevel("TanksLobby");
     }
 
     //Игрок зашел в комнату
