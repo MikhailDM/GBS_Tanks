@@ -14,11 +14,11 @@ public sealed class ExamplePositionSystem : UpdateSystem {
         this.filter = this.World.Filter.With<UnitComponent>();
 
         //Создаем обьекты
-        for (int i = 0, length = 5; i < length; i++)
-        {
-           var ent = World.CreateEntity();
-           ent.AddComponent<UnitComponent>();
-        }
+        //for (int i = 0, length = 5; i < length; i++)
+        //{
+        //   var ent = World.CreateEntity();
+        //   ent.AddComponent<UnitComponent>();
+        //}
     }
 
     public override void OnUpdate(float deltaTime) {
