@@ -7,11 +7,14 @@ using Unity.IL2CPP.CompilerServices;
 [Il2CppSetOption(Option.DivideByZeroChecks, false)]
 [CreateAssetMenu(menuName = "ECS/Systems/" + nameof(ExamplePositionSystem))]
 public sealed class ExamplePositionSystem : UpdateSystem {
-    private Filter filter;
+    //public GlobalEvent StopEvent;
+
+    private Filter filterMovableUnits;
+
 
 
     public override void OnAwake() {
-        this.filter = this.World.Filter.With<UnitComponent>();
+        this.filterMovableUnits = this.World.Filter.With<UnitComponent>();
 
         //Создаем обьекты
         //for (int i = 0, length = 5; i < length; i++)
@@ -22,12 +25,12 @@ public sealed class ExamplePositionSystem : UpdateSystem {
     }
 
     public override void OnUpdate(float deltaTime) {
-        foreach (var entity in this.filter)
+        foreach (var entity in this.filterMovableUnits)
         {
             ref var unit = ref entity.GetComponent<UnitComponent>();
-            //Перемещает сущности
+            //Изменение координат
             unit.Position = unit.Position + Vector3.one * deltaTime;
-            Debug.Log("Test");
+            //Debug.Log("Test");
         }
     }
 }

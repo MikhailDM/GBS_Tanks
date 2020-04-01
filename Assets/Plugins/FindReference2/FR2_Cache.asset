@@ -4313,6 +4313,36 @@ MonoBehaviour:
     stamp: 0
     type: 5
     UseGUIDsList: []
+  - guid: ea35dfcb6e2680348a5b0aaae0261269
+    loadInfoTS: 0
+    stamp: 0
+    type: 2
+    UseGUIDsList: []
+  - guid: 019cb232a7270d1489a8f4fddbc7d99b
+    loadInfoTS: 0
+    stamp: 0
+    type: 1
+    UseGUIDsList: []
+  - guid: 7af3b84dace331d459cf234004ba807d
+    loadInfoTS: 0
+    stamp: 0
+    type: 5
+    UseGUIDsList: []
+  - guid: febffd649051541488690248e0f8ac3c
+    loadInfoTS: 0
+    stamp: 0
+    type: 1
+    UseGUIDsList: []
+  - guid: 13f38b40d4b1188448abe585bd2eeae2
+    loadInfoTS: 0
+    stamp: 0
+    type: 1
+    UseGUIDsList: []
+  - guid: 688d926d125827747aaaa8b22cfcea3e
+    loadInfoTS: 0
+    stamp: 0
+    type: 2
+    UseGUIDsList: []
   priority: 3
   setting:
     alternateColor: 1
