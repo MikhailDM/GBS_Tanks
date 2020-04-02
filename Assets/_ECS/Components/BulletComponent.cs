@@ -8,4 +8,5 @@ using Unity.IL2CPP.CompilerServices;
 [System.Serializable]
 public struct BulletComponent : IComponent {
     public int bulletSpeed;
+    public Transform transform;
 }

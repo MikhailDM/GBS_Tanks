@@ -112,6 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serializedData:
     bulletSpeed: 5
+    transform: {fileID: 2161492022713876862}
 --- !u!1 &292537670102947815
 GameObject:
   m_ObjectHideFlags: 0

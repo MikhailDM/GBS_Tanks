@@ -11,6 +11,7 @@ public struct PlayerComponent : IComponent {
     public PhotonView PhotonViewLink;
     public Vector3 Position;
     public Transform Transform;
+    public GameObject bulletPrefab;
     public int lives;
     public int speed;
 }

@@ -140,6 +140,8 @@ MonoBehaviour:
     PhotonViewLink: {fileID: 8330910482404126136}
     Position: {x: 0, y: 0, z: 0}
     Transform: {fileID: 3977846520773974770}
+    bulletPrefab: {fileID: 156515824331644076, guid: 593732c429b90b44a9379e94cd264770,
+      type: 3}
     lives: 2
     speed: 2
 --- !u!61 &2617674457518330322
