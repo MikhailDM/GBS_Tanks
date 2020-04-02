@@ -2012,7 +2012,7 @@ PrefabInstance:
     - target: {fileID: 9100313224173870230, guid: 64e5d165f175ba44d829d9d0104854ac,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.65
+      value: 4.4
       objectReference: {fileID: 0}
     - target: {fileID: 9100313224173870230, guid: 64e5d165f175ba44d829d9d0104854ac,
         type: 3}
@@ -2178,8 +2178,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1204763916}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 5.802, y: 0, z: 0}
-  m_LocalScale: {x: 62.299416, y: 10.9800005, z: 5}
+  m_LocalPosition: {x: 5.668, y: 0, z: 0}
+  m_LocalScale: {x: 62.299416, y: 12.659941, z: 5}
   m_Children: []
   m_Father: {fileID: 1302303871}
   m_RootOrder: 3
@@ -2431,6 +2431,10 @@ MonoBehaviour:
     system: {fileID: 11400000, guid: 68038560b6c60a146b51d3e7b2365d76, type: 2}
   - enabled: 1
     system: {fileID: 11400000, guid: 5a4dd060df9f94b4c8c57a0b9b330d8c, type: 2}
+  - enabled: 1
+    system: {fileID: 11400000, guid: b7b329cd8575466478252f0a127c4135, type: 2}
+  - enabled: 1
+    system: {fileID: 11400000, guid: 358d756b4f7f8b245b63dc3b99f9cd59, type: 2}
   fixedUpdateSystems: []
   lateUpdateSystems: []
 --- !u!4 &1324457775
@@ -3251,7 +3255,7 @@ PrefabInstance:
     - target: {fileID: 9100313224173870230, guid: 64e5d165f175ba44d829d9d0104854ac,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.65
+      value: 4.4
       objectReference: {fileID: 0}
     - target: {fileID: 9100313224173870230, guid: 64e5d165f175ba44d829d9d0104854ac,
         type: 3}
