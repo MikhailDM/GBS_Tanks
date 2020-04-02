@@ -25,10 +25,10 @@ public class GameManager : MonoBehaviourPunCallbacks
     }
 
     //Кнопка покидания комнаты
-    public void Leave()
+    /*public void Leave()
     {
         PhotonNetwork.LeaveRoom();
-    }
+    }*/
 
 
     //Когда текущий игрок покидает комнату
@@ -45,9 +45,9 @@ public class GameManager : MonoBehaviourPunCallbacks
         Debug.LogFormat("Player {0} enteren room", newPlayer.NickName);
     }
 
-    //Игрок вышел из комнаты
+    /*//Игрок вышел из комнаты
     public override void OnPlayerLeftRoom(Player otherPlayer)
     {
         Debug.LogFormat("Player {0} left room", otherPlayer.NickName);
-    }
+    }*/
 }
