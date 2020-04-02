@@ -16,8 +16,9 @@ public sealed class BulletSystem : UpdateSystem {
 
     public override void OnUpdate(float deltaTime) {
         moveForward();
-    }
+        //checkBulletCollisions();
 
+    }    
 
     private void moveForward()
     {
@@ -32,6 +33,31 @@ public sealed class BulletSystem : UpdateSystem {
             //Двигаем снаряд вперед
             //bulletComponent.transform.Translate(Vector2.up * Time.deltaTime * bulletComponent.bulletSpeed);
             bulletComponent.transform.Translate(0, Time.deltaTime * bulletComponent.bulletSpeed, 0);
-        }
+        }        
     }
+
+    void OnCollisionEnter(Collision other)
+    {
+        Debug.Log("COLLISION!!");
+        Destroy(this);           
+    }
+
+
+
+    /*private void checkBulletCollisions()
+    {
+        var bulletsBag = this.filter.Select<BulletComponent>();
+
+        //Перебираем все сущности в фильтре
+        for (int i = 0, length = this.filter.Length; i < length; i++)
+        {
+            //Получаем все ссылки компонента
+            ref var bulletComponent = ref bulletsBag.GetComponent(i);
+
+            void OnCollisionEnter(Collision other)
+            {           
+                Destroy(this);                
+            }
+        }
+    }*/
 }

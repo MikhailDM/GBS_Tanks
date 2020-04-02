@@ -16,22 +16,12 @@ public sealed class PlayerControlSystem : UpdateSystem {
     {
         //Ищем через фильтр компонент
         this.filter = this.World.Filter.With<PlayerComponent>();
-
-        var playersStartBag = this.filter.Select<PlayerComponent>();
-        for (int i = 0, length = this.filter.Length; i < length; i++)
-        {
-            //Получаем все ссылки компонента
-            ref var playerComponent = ref playersStartBag.GetComponent(i);
-            Vector3 add = new Vector3(0, 0.5f, 0);
-            bulletInstPos = playerComponent.Transform.position + add;
-        }
+        StartBulletPos();
     }
 
     public override void OnUpdate(float deltaTime) {
         UpdateMovement();
     }
-
-
 
 
     private void UpdateMovement()
@@ -82,7 +72,7 @@ public sealed class PlayerControlSystem : UpdateSystem {
             {
                 playerComponent.Transform.Translate(0, Time.deltaTime * playerComponent.speed, 0);
                 playerComponent.Transform.localRotation = Quaternion.Euler(0, 0, 180);
-
+                
                 Vector2 currentPos = playerComponent.Transform.position;
                 Vector2 add = new Vector2(0, -0.5f);
                 bulletInstPos = currentPos + add;
@@ -96,4 +86,17 @@ public sealed class PlayerControlSystem : UpdateSystem {
             }
         }
     }
+
+    private void StartBulletPos()
+    {
+        var playersStartBag = this.filter.Select<PlayerComponent>();
+        for (int i = 0, length = this.filter.Length; i < length; i++)
+        {
+            //Получаем все ссылки компонента
+            ref var playerComponent = ref playersStartBag.GetComponent(i);
+            Vector3 add = new Vector3(0, 0.5f, 0);
+            bulletInstPos = playerComponent.Transform.position + add;
+        }
+    }
+    
 }
