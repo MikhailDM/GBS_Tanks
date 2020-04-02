@@ -9,13 +9,24 @@ public class GameManager : MonoBehaviourPunCallbacks
 {
     public GameObject PlayerPrefab;
 
+    public GameObject spawnPosP1;
+    public GameObject spawnPosP2;
+
 
     // Start is called before the first frame update
     void Start()
     {
         //Спавн персонажей
-        Vector2 pos = new Vector3(0, 0);
-        PhotonNetwork.Instantiate(PlayerPrefab.name, pos, Quaternion.identity);
+        //Vector2 pos = new Vector3(0, 0);
+        Vector2 pos1 = spawnPosP1.transform.position;
+        Vector2 pos2 = spawnPosP2.transform.position;
+        if (PhotonNetwork.PlayerList.Length == 1)
+        {
+            PhotonNetwork.Instantiate(PlayerPrefab.name, pos1, Quaternion.identity);
+        } else
+        {
+            PhotonNetwork.Instantiate(PlayerPrefab.name, pos2, Quaternion.identity);
+        }        
     }
 
     // Update is called once per frame
